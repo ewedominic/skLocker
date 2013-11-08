@@ -9,9 +9,9 @@ How to Use This app?
 
 Okay, Firstly download the file named skLocker from app/ directory and change the permission to execute this file as a programme. And double click on that file. 
 
-The username is: hasib
+The username is: skLocker
 
-password is: google
+password is: password
 
 Unfortunately at now you can't change the username/password. Sorry for that :( :(
 

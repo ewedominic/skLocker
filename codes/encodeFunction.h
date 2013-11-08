@@ -123,6 +123,13 @@ int encode(string inFileName, string outFileName, string keyFileName = "")
         keyFileGiven = true;
         key.seekg(0, key.end);
         len = key.tellg();
+
+        if(len == 0)
+        {
+            return 4;
+        }
+
+
         key.seekg(0, key.beg);
 
         code = new char[len];

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>505</height>
+    <width>561</width>
+    <height>476</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,9 @@
       <height>27</height>
      </rect>
     </property>
+    <property name="text">
+     <string>skLocker</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_passWord">
     <property name="geometry">
@@ -50,7 +53,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>password</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -265,7 +268,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>606</width>
+     <width>561</width>
      <height>25</height>
     </rect>
    </property>

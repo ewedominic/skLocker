@@ -53,8 +53,8 @@ QString toPath, secretFilePath;
 
 bool matchPassword(string usr, string pass)
 {
-    string correctUserName = "hasib";
-    string correctPassWord = "google";
+    string correctUserName = "skLocker";
+    string correctPassWord = "password";
 
    if(usr==correctUserName && pass == correctPassWord)
        return true;
@@ -250,12 +250,18 @@ void MainWindow::on_pushButton_fire_clicked()
             else if(errorCode == 3)
             {
                 showError("Error", "Can't open secret key file.");
+                goto freeCursor;
+            }
+            else if(errorCode == 4)
+            {
+                showError("Error", "Empty file can't be used as a key file!!");
+                goto freeCursor;
             }
             else
             {
                 remove(outFileName.c_str());
                 if( rename((outFileName+".converting").c_str(), outFileName.c_str()) == 0  )
-                {//successfully removed
+                {//successfully removed and renamed :)
                     cnt++;
                 }
                 else
@@ -268,6 +274,8 @@ void MainWindow::on_pushButton_fire_clicked()
         }
 
         showError("Successful!!", QString::number(cnt).toStdString() +  " file(s) out of " + QString::number(files.size()).toStdString() +  " file(s) successfully converted!!");
+
+        freeCursor:
         this->setCursor(Qt::ArrowCursor);
 
 
